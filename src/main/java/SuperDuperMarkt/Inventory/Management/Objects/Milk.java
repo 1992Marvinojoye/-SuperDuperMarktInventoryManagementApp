@@ -1,5 +1,5 @@
 package SuperDuperMarkt.Inventory.Management.Objects;
 
-public class ProductObject {
-
+public class Milk {
+    
 }

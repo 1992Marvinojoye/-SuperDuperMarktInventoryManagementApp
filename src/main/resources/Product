@@ -1,0 +1,30 @@
+Product
+    -Brand {String}
+    -Category {String}
+    -Expiredate 
+    -BasePrise {Dezimal}
+    -CurrentPrise
+    -QualityName {Low,Midle,High} Enum
+    -QualityRate {Int}
+    -Productstate
+    
+    {get:set}
+    :totString { Category, Brand, Expiredate, QualityName (QualityRate {Int}),  }
+    :calculateExpiredate
+    :calculateProductstate
+    :DefinedFormular | p.BasePrise + 0.1(€) + p.QualityRate
+    :calculatePrise 
+    :retreveActuellProductstate
+    | Wine, MilkProduct, RedBullProduct, +?
+
+Wine> ery 10 Days until 50
+Cheese> 50-100
+Ivent> Formular
+
+ProductHandler
+    |ArrayList<Product>|Productlist
+    :addProduct (Product)
+    :remProduct (Product)
+    T:disposeProduckt
+    ArrayList<Product>:importProduct =CSV, =Json, SQL
+    ArrayList<Product>:displayAllProducts
