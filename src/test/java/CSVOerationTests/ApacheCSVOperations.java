@@ -78,6 +78,6 @@ public class ApacheCSVOperations {
 	
 	@Test
 	public void readgenericCSVBean() throws IOException {
-		
+		Arraylist<User> usercsv =
 	}
 }
