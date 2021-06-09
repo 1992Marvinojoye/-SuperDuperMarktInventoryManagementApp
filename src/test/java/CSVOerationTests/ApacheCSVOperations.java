@@ -7,6 +7,7 @@ import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.Reader;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -61,10 +62,22 @@ public class ApacheCSVOperations {
 	      .withHeader(HEADERS)
 	      .withFirstRecordAsHeader()
 	      .parse(in);
+	    
+	    ArrayList<CSVRecord> rows = new ArrayList<CSVRecord>();
+	    
 	    for (CSVRecord record : records) {
 	        String author = record.get("author");
 	        String title = record.get("title");
 	        assertEquals(AUTHOR_BOOK_MAP.get(author), title);
+	        rows.add(record);
 	    }
+	    
+	    rows.stream().forEach(System.out::println);
+	    
+	}
+	
+	@Test
+	public void readgenericCSVBean() throws IOException {
+		
 	}
 }

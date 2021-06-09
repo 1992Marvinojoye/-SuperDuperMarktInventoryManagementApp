@@ -118,7 +118,7 @@ public class UserCSVReader {
 		 * users.forEach(System.out::println); }
 		 */
 
-		// displayCSVRows();
+	    displayCSVRows();
 		displayCSVBeansv2();
 	}
 

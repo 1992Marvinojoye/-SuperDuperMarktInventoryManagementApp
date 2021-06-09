@@ -40,7 +40,7 @@ public class UserCSVWriter {
 			// close the writer
 			writer.close();
 			
-			users.forEach(e -> Arrays.asList(e).stream().forEach(System.out::println));
+			//users.forEach(e -> Arrays.asList(e).stream().forEach(System.out::println));
 
 		} catch (Exception ex) {
 			ex.printStackTrace();
